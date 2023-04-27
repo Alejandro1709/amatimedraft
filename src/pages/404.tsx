@@ -4,7 +4,7 @@ import type { NextPage } from "next";
 
 const NotFoundPage: NextPage = () => {
   return (
-    <Layout title="Not found | Amatime" description="Page not found">
+    <Layout title="Amatime | Not Found" description="Page not found">
       <section className="p-4 border text-center space-y-2">
         <div className="mb-2">
           <h1 className="text-2xl font-medium">404 page not found.</h1>

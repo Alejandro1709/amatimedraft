@@ -17,7 +17,7 @@ const Layout: React.FC<LayoutProps> = ({ title = "Amatime", description = "Gener
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Wrapper>
-        <Header title={title} />
+        <Header title={title.split('|')[1]} />
         {children}
         <footer className="flex flex-row justify-center items-center gap-4 border p-4 bg-white">
           <h2 className="text-2xl font-medium">Footer</h2>
