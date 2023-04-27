@@ -3,7 +3,7 @@ type QuestionProps = {
   author: string
 }
 
-const Question: React.FC<QuestionProps> = ({ question, author = "Anonnymous" }) => {
+const Question: React.FC<QuestionProps> = ({ question, author = "Anonymous" }) => {
   return (
     <article className="p-4 space-y-1 border-b last:border-none">
       <h2 className="text-sm text-gray-600">{author} asks:</h2>

@@ -15,3 +15,13 @@ model Example {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
+model Question {
+  id         String   @id @default(cuid())
+  question   String
+  isPublic   Boolean? @default(false)
+  isAnswered Boolean? @default(false)
+  author     String?  @default("Anonymous")
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
