@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Alert from "@/components/Alert";
+import Header from "@/components/Header";
 import { type NextPage } from "next";
 
 const Home: NextPage = () => {
@@ -11,9 +12,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="flex flex-col min-h-screen md:max-w-screen-md md:mx-auto space-y-2 p-4">
-        <header className="flex flex-row justify-center items-center gap-4 border p-4 bg-white">
-          <h2 className="text-2xl font-medium">Amatime | alefsdev</h2>
-        </header>
+        <Header />
         <main className="flex-1 space-y-2 bg-white">
           <Alert message="This is a message..." />
           <section className="flex flex-col max-h-full border">
