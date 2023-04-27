@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Alert from "@/components/Alert";
 import Header from "@/components/Header";
+import List from "@/components/List";
 import { type NextPage } from "next";
 
 const Home: NextPage = () => {
@@ -13,106 +14,9 @@ const Home: NextPage = () => {
       </Head>
       <div className="flex flex-col min-h-screen md:max-w-screen-md md:mx-auto space-y-2 p-4">
         <Header />
-        <main className="flex-1 space-y-2 bg-white">
+        <main className="space-y-2 bg-white">
           <Alert message="This is a message..." />
-          <section className="flex flex-col max-h-full border">
-            <article className="p-4 space-y-1 border-b last:border-none">
-              <h2 className="text-sm text-gray-600">Anonnymous asks:</h2>
-              <p className="text-xl font-medium">How to use Next.js with TailwindCSS?</p>
-            </article>
-            <article className="p-4 space-y-1 border-b last:border-none">
-              <h2 className="text-sm text-gray-600">tumamarica asks:</h2>
-              <p className="text-xl font-medium">
-                Cual es tu curso favorito de Platzi?
-              </p>
-            </article>
-            <article className="p-4 space-y-1 border-b last:border-none">
-              <h2 className="text-sm text-gray-600">miguelord asks:</h2>
-              <p className="text-xl font-medium">
-                Cual es tu curso favorito de Platzi?
-              </p>
-            </article>
-            <article className="p-4 space-y-1 border-b last:border-none">
-              <h2 className="text-sm text-gray-600">Anonnymous asks:</h2>
-              <p className="text-xl font-medium">How to use Next.js with TailwindCSS?</p>
-            </article>
-            <article className="p-4 space-y-1 border-b last:border-none">
-              <h2 className="text-sm text-gray-600">tumamarica asks:</h2>
-              <p className="text-xl font-medium">
-                Cual es tu curso favorito de Platzi?
-              </p>
-            </article>
-            <article className="p-4 space-y-1 border-b last:border-none">
-              <h2 className="text-sm text-gray-600">miguelord asks:</h2>
-              <p className="text-xl font-medium">
-                Cual es tu curso favorito de Platzi?
-              </p>
-            </article>
-            <article className="p-4 space-y-1 border-b last:border-none">
-              <h2 className="text-sm text-gray-600">Anonnymous asks:</h2>
-              <p className="text-xl font-medium">How to use Next.js with TailwindCSS?</p>
-            </article>
-            <article className="p-4 space-y-1 border-b last:border-none">
-              <h2 className="text-sm text-gray-600">tumamarica asks:</h2>
-              <p className="text-xl font-medium">
-                Cual es tu curso favorito de Platzi?
-              </p>
-            </article>
-            <article className="p-4 space-y-1 border-b last:border-none">
-              <h2 className="text-sm text-gray-600">miguelord asks:</h2>
-              <p className="text-xl font-medium">
-                Cual es tu curso favorito de Platzi?
-              </p>
-            </article>
-            <article className="p-4 space-y-1 border-b last:border-none">
-              <h2 className="text-sm text-gray-600">Anonnymous asks:</h2>
-              <p className="text-xl font-medium">How to use Next.js with TailwindCSS?</p>
-            </article>
-            <article className="p-4 space-y-1 border-b last:border-none">
-              <h2 className="text-sm text-gray-600">tumamarica asks:</h2>
-              <p className="text-xl font-medium">
-                Cual es tu curso favorito de Platzi?
-              </p>
-            </article>
-            <article className="p-4 space-y-1 border-b last:border-none">
-              <h2 className="text-sm text-gray-600">miguelord asks:</h2>
-              <p className="text-xl font-medium">
-                Cual es tu curso favorito de Platzi?
-              </p>
-            </article>
-            <article className="p-4 space-y-1 border-b last:border-none">
-              <h2 className="text-sm text-gray-600">Anonnymous asks:</h2>
-              <p className="text-xl font-medium">How to use Next.js with TailwindCSS?</p>
-            </article>
-            <article className="p-4 space-y-1 border-b last:border-none">
-              <h2 className="text-sm text-gray-600">tumamarica asks:</h2>
-              <p className="text-xl font-medium">
-                Cual es tu curso favorito de Platzi?
-              </p>
-            </article>
-            <article className="p-4 space-y-1 border-b last:border-none">
-              <h2 className="text-sm text-gray-600">miguelord asks:</h2>
-              <p className="text-xl font-medium">
-                Cual es tu curso favorito de Platzi?
-              </p>
-            </article>
-            <article className="p-4 space-y-1 border-b last:border-none">
-              <h2 className="text-sm text-gray-600">Anonnymous asks:</h2>
-              <p className="text-xl font-medium">How to use Next.js with TailwindCSS?</p>
-            </article>
-            <article className="p-4 space-y-1 border-b last:border-none">
-              <h2 className="text-sm text-gray-600">tumamarica asks:</h2>
-              <p className="text-xl font-medium">
-                Cual es tu curso favorito de Platzi?
-              </p>
-            </article>
-            <article className="p-4 space-y-1 border-b last:border-none">
-              <h2 className="text-sm text-gray-600">miguelord asks:</h2>
-              <p className="text-xl font-medium">
-                Cual es tu curso favorito de Platzi?
-              </p>
-            </article>
-          </section>
+          <List />
         </main>
         <footer className="flex flex-row justify-center items-center gap-4 border p-4 bg-white">
           <h2 className="text-2xl font-medium">Footer</h2>
