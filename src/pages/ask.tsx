@@ -1,4 +1,6 @@
+/* eslint-disable @typescript-eslint/no-floating-promises */
 import { useRef } from "react";
+import { useRouter } from "next/router";
 import Layout from "@/components/Layout";
 import Link from "next/link";
 import { api } from "@/utils/api";
@@ -8,6 +10,8 @@ import type { NextPage } from "next";
 const AskPage: NextPage = () => {
   const questionRef = useRef<HTMLTextAreaElement>(null);
   const authorRef = useRef<HTMLInputElement>(null);
+
+  const router = useRouter();
 
   const { mutate, isLoading, error } = api.questions.createOne.useMutation();
 
@@ -35,6 +39,8 @@ const AskPage: NextPage = () => {
 
     questionRef.current.value = "";
     authorRef.current && (authorRef.current.value = "");
+
+    router.push("/");
   };
 
   return (
