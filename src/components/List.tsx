@@ -10,7 +10,7 @@ const List: React.FC = () => {
       {isLoading ? <Alert type="loading" message="Loading..." /> : null}
       {error ? <Alert type="error" message={error.message} /> : null}
       {data ? data.map((question) => (
-        <Question key={question.id} question={question.question} author={question.author} />
+        <Question key={question.id} question={question.question} author={question.author || "Anonymous"} />
       )) : null}
     </section>
   )
