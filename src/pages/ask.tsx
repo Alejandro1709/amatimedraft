@@ -1,11 +1,15 @@
+import { useRef } from "react";
 import Layout from "@/components/Layout";
 import Link from "next/link";
-import { useRef } from "react";
+import { api } from "@/utils/api";
+import Alert from "@/components/Alert";
 import type { NextPage } from "next";
 
 const AskPage: NextPage = () => {
   const questionRef = useRef<HTMLTextAreaElement>(null);
   const authorRef = useRef<HTMLInputElement>(null);
+
+  const { mutate, isLoading, error } = api.questions.createOne.useMutation();
 
   const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
     event.preventDefault();
@@ -22,12 +26,21 @@ const AskPage: NextPage = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    console.log(questionRef.current?.value);
-    console.log(authorRef.current?.value);
+    if (!questionRef.current?.value) return
+
+    mutate({
+      question: questionRef.current.value,
+      author: authorRef.current?.value || "Anonymous"
+    })
+
+    questionRef.current.value = "";
+    authorRef.current && (authorRef.current.value = "");
   };
 
   return (
     <Layout title="Amatime | Ask" description="">
+      {error ? <Alert type="error" message={error.message} /> : null}
+      {isLoading ? <Alert type="loading" message="Loading..." /> : null}
       <section className="p-4 border">
         <form className="flex flex-col gap-2" onSubmit={handleSubmit}>
           <div className="flex flex-col gap-1">
