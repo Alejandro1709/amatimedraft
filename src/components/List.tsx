@@ -6,7 +6,7 @@ const List: React.FC = () => {
   const { data, isLoading, error } = api.questions.getAll.useQuery()
 
   return (
-    <section className="flex flex-col max-h-full border">
+    <section className="flex flex-col max-h-full border border-slate-700 bg-slate-800">
       {isLoading ? <Alert type="loading" message="Loading..." /> : null}
       {error ? <Alert type="error" message={error.message} /> : null}
       {data ? data.map((question) => (

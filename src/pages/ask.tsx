@@ -47,18 +47,19 @@ const AskPage: NextPage = () => {
     <Layout title="Amatime | Ask" description="">
       {error ? <Alert type="error" message={error.message} /> : null}
       {isLoading ? <Alert type="loading" message="Loading..." /> : null}
-      <section className="p-4 border">
+      <Alert type="warning" message="Your question won't be public until the admin makes it public." />
+      <section className="p-4 border border-slate-700">
         <form className="flex flex-col gap-2" onSubmit={handleSubmit}>
           <div className="flex flex-col gap-1">
             <label className="text-sm text-gray-500" htmlFor="title">Write your question:</label>
-            <textarea className="p-2 border resize-none" required ref={questionRef} onChange={handleChange}></textarea>
+            <textarea className="p-2 border resize-none text-white bg-slate-800 border-slate-700" required ref={questionRef} onChange={handleChange}></textarea>
           </div>
           <div className="flex flex-col gap-1">
             <label className="text-sm text-gray-500" htmlFor="author">Who is asking the question?:</label>
-            <input className="p-2 border" type="text" placeholder="defaults to 'Anonymous'" ref={authorRef} onChange={handleChange} />
+            <input className="p-2 border bg-slate-800 text-white border-slate-700" type="text" placeholder="defaults to 'Anonymous'" ref={authorRef} onChange={handleChange} />
           </div>
-          <button className="p-2 bg-blue-400 text-white font-medium hover:bg-blue-500 active:bg-blue-600 transition-all rounded-lg mt-2" type="submit">Send</button>
-          <Link href="/" className="p-2 bg-red-400 text-center text-white font-medium hover:bg-red-500 active:bg-red-600 transition-all rounded-lg mt-1" type="button">Cancel</Link>
+          <button className="p-2 bg-blue-500 text-white font-medium hover:bg-blue-600 active:bg-blue-700 transition-all rounded-lg mt-2" type="submit">Send</button>
+          <Link href="/" className="p-2 bg-red-500 text-center text-white font-medium hover:bg-red-600 active:bg-red-700 transition-all rounded-lg mt-1" type="button">Cancel</Link>
         </form>
       </section>
     </Layout>
