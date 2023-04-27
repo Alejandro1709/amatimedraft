@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Alert from "@/components/Alert";
 import { type NextPage } from "next";
 
 const Home: NextPage = () => {
@@ -14,10 +15,7 @@ const Home: NextPage = () => {
           <h2 className="text-2xl font-medium">Amatime | alefsdev</h2>
         </header>
         <main className="flex-1 space-y-2 bg-white">
-          <div className="flex flex-row justify-between items-center bg-blue-400 p-2 text-white font-medium">
-            <h3>Loading...</h3>
-            <button>Close</button>
-          </div>
+          <Alert message="This is a message..." />
           <section className="flex flex-col max-h-full border">
             <article className="p-4 space-y-1 border-b last:border-none">
               <h2 className="text-sm text-gray-600">Anonnymous asks:</h2>
