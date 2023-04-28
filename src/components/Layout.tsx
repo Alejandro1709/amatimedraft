@@ -19,9 +19,9 @@ const Layout: React.FC<LayoutProps> = ({ title = "Amatime", description = "Amati
       <Wrapper>
         <Header title={title.split('|')[1]} />
         {children}
-        {/* <footer className="flex flex-row justify-center items-center gap-4 border p-4 bg-white">
+        <footer className="flex flex-row justify-center items-center gap-4 border p-4 bg-white">
           <h2 className="text-2xl font-medium">Footer</h2>
-        </footer> */}
+        </footer>
       </Wrapper>
     </>
   )
